@@ -18,11 +18,12 @@ Extend(app)
 
 MOCK_FOLDER = "mocks"
 MOCK_FILES = {
-    "emo": "emo_playlist_dataset.csv",
-    "punk": "punks_playlist_dataset.csv",
-    "geek": "geeks_playlist_dataset.csv",
-    "queer": "queer_playlist_dataset.csv",
-    "hardcore": "hardcore_playlist_dataset.csv",
+    "emo": "emo_genre_dataset.csv",
+    "country":"country_genre_dataset.csv",
+    "hip_hop": "hip_hop_genre_dataset.csv",
+    "pop": "pop_genre_dataset.csv",
+    "reggae": "reggae_genre_dataset.csv",
+    "rock": "rock_genre_dataset.csv",
 }
 
 
