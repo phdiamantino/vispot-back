@@ -17,9 +17,17 @@ app = Sanic("tcc_api")
 #app.config.CORS_ORIGINS = "*"
 #Extend(app)
 
+allowed_origins = [
+    "https://vispot-front.vercel.app",
+    "http://localhost:3000", 
+    "http://localhost:5173"
+]
+
 CORS(app, resources={
     r"/*": {
-        "origins": ["https://vispot-front.vercel.app"]
+        "origins": allowed_origins,
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
     }
 })
 
