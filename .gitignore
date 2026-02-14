@@ -160,5 +160,6 @@ cython_debug/
 #.idea/
 
 # CSV mock files
-mocks/*.csv
+*.csv
+!mocks/*.csv
 .vercel
