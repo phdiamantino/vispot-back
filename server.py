@@ -18,13 +18,13 @@ app = Sanic("tcc_api")
 #Extend(app)
 
 
-CORS(app, resources={
-    r"/*": {
-        "origins": "*",
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    }
-})
+app.config.CORS_ORIGINS = "*"
+app.config.CORS_METHODS = ["GET", "POST", "OPTIONS"]
+app.config.CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
+
+Extend(app)
+
+
 
 
 MOCK_FOLDER = "mocks"
