@@ -20,10 +20,13 @@ app = Sanic("tcc_api")
 
 app.config.CORS_ORIGINS = "*"
 app.config.CORS_METHODS = ["GET", "POST", "OPTIONS"]
-app.config.CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
+app.config.CORS_ALLOW_HEADERS = [
+    "Content-Type", 
+    "Authorization", 
+    "Access-Control-Allow-Origin" 
+]
 
 Extend(app)
-
 
 
 
