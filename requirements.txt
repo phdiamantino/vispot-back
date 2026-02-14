@@ -8,3 +8,4 @@ redis==7.1.0
 spotipy==2.23.0
 gunicorn==21.2.0
 matplotlib==3.8.4
+sanic-cors==2.2.0
