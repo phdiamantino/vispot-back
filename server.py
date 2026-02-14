@@ -5,6 +5,7 @@ import pandas as pd
 from sanic import Sanic
 from sanic.response import json
 from sanic_ext import Extend
+from sanic_cors import CORS
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,8 +14,14 @@ from tsne import increment_with_tsne_data
 from tfidf import calculate_correlation_matrix
 
 app = Sanic("tcc_api")
-app.config.CORS_ORIGINS = "*"
-Extend(app)
+#app.config.CORS_ORIGINS = "*"
+#Extend(app)
+
+CORS(app, resources={
+    r"/*": {
+        "origins": ["https://vispot-front.vercel.app"]
+    }
+})
 
 MOCK_FOLDER = "mocks"
 MOCK_FILES = {
